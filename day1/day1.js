@@ -11,7 +11,7 @@ const left = [];
 const right = [];
 
 lines.forEach(line => {
-	const [l, r] = line.split("   ").map(Number);
+	const [l, r] = line.split(/\s+/).map(Number);
 	left.push(l);
 	right.push(r);
 })
