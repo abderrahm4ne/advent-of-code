@@ -29,7 +29,7 @@ return totalDistance;
 }
 
 
-const path = './input.txt';
+const path = './day1/input.txt';
 
 const pairs = distance(path);
 console.log(pairs);
