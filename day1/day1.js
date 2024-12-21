@@ -31,5 +31,5 @@ return totalDistance;
 
 const path = './day1/input.txt';
 
-const pairs = distance(path);
-console.log(pairs);
+const result = distance(path);
+console.log(result);
