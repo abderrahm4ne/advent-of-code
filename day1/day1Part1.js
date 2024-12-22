@@ -8,7 +8,7 @@ const lines = data.trim().split('\n');
 	const right = [];
 
 	lines.forEach(line => {
-		const [l, r] = line.split("   ").map(Number);
+		const [l, r] = line.split(/\s+/).map(Number);
 		left.push(l);
 		right.push(r);
 	})
@@ -26,6 +26,6 @@ const lines = data.trim().split('\n');
 }
 
 
-const path = './day1/input1.txt';
+const path = './day1/input.txt';
 const pairs = distance(path);
 console.log(pairs);
