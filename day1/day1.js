@@ -17,7 +17,7 @@ lines.forEach(line => {
 })
 
 left.sort((a, b) => a - b);
-right.sort((a, b) => a - b);
+right.sort((a, b) => b - a);
 
 	let totalDistance = 0;
 
