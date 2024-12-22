@@ -8,10 +8,9 @@ function numberOfSafeReports(path) {
     lines.forEach(line => {
         const report = line.split(' ').map(Number);
 
-        console.log(report);
         let isAscending = true;
         let isDescending = true;
-        let scending = true;
+        let order = true;
         for (let i = 0; i < report.length - 1; i++) {
             let diff = report[i] - report[i + 1];
             if(diff > 0){
@@ -20,13 +19,13 @@ function numberOfSafeReports(path) {
             if(diff < 0){
                 isAscending = false;
             }
-            if(Math.abs(diff) > 3 && Math.abs(diff) < 1){
-                scending = false;
+            if(Math.abs(diff) > 3 || diff === 0){
+                order = false;
                 break;
             }
 
     }
-    if(scending && (isAscending || isDescending)){
+    if(order && (isAscending || isDescending)){
         safeRep++;
     }
 });
