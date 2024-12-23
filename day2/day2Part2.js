@@ -11,6 +11,7 @@ function numberOfSafeReports(path) {
         let isAscending = true;
         let isDescending = true;
         let order = true;
+
         for (let i = 0; i < report.length - 1; i++) {
             let diff = report[i] - report[i + 1];
             if(diff > 0){
@@ -23,16 +24,18 @@ function numberOfSafeReports(path) {
                 order = false;
                 break;
             }
-    }
+        }
     if(order && (isAscending || isDescending)){
         safeRep++;
     }
-    else if(!order){
+    else{
         for(let i = 0; i < report.length; i++){
             let newArray = report.slice(0, i).concat(report.slice(i + 1));
+
                     isAscending = true;
                     isDescending = true;
                     order = true;
+
                 for (let j = 0; j < newArray.length - 1; j++) {
                     let diff = newArray[j] - newArray[j + 1];
                     if(diff > 0){
@@ -45,7 +48,6 @@ function numberOfSafeReports(path) {
                         order = false;
                         break;
                     }
-
                 }
                 if(order && (isAscending || isDescending)){
                     safeRep++;
@@ -59,4 +61,4 @@ function numberOfSafeReports(path) {
 
 let path = './day2/input.txt';
 let result = numberOfSafeReports(path);
-console.log("here is the number of safe lits " + result);
+console.log(result);

@@ -23,16 +23,16 @@ function numberOfSafeReports(path) {
                 order = false;
                 break;
             }
-    }
-    if(order && (isAscending || isDescending)){
-        safeRep++;
-    }
-    else if(!order){
-        for(let i = 0; i < report.length; i++){
-            let newArray = report.slice(0, i).concat(report.slice(i + 1));
-                    isAscending = true;
-                    isDescending = true;
-                    order = true;
+        }
+        if(order && (isAscending || isDescending)){
+            safeRep++;
+        }
+        else if(!order){
+            for(let i = 0; i < report.length; i++){
+                let newArray = report.slice(0, i).concat(report.slice(i + 1));
+                isAscending = true;
+                isDescending = true;
+                order = true;
                 for (let j = 0; j < newArray.length - 1; j++) {
                     let diff = newArray[j] - newArray[j + 1];
                     if(diff > 0){
