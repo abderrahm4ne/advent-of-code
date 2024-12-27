@@ -18,5 +18,5 @@ function sumOfMul(path) {
 }
 
 const path = './day3/input.txt';
-let result = sumOfMul(path);
+const result = sumOfMul(path);
 console.log(result);
