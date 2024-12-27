@@ -59,6 +59,6 @@ function numberOfSafeReports(path) {
     return safeRep;
 }
 
-let path = './day2/input.txt';
-let result = numberOfSafeReports(path);
+const path = './day2/input.txt';
+const result = numberOfSafeReports(path);
 console.log(result);
